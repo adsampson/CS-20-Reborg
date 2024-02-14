@@ -1,4 +1,4 @@
-while not at_goal():
+while not at_goal():       #this will go untill we are standing on the goal then it will stop
     if right_is_clear():
         turn_right()
         move()
