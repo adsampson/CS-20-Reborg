@@ -1,0 +1,16 @@
+from library import turn_right, turn_around
+#this is the funtion I will call
+def jump_hurdle():
+    if  wall_in_front(): #this is to detected a hurdle and to point us north so we dont hit them
+        turn_left()
+    elif not wall_on_right(): #this is used to check were the hurdle ends and when it does to get us poined south down the other end 
+        turn_right()
+        move()
+        turn_right()
+        while not wall_in_front(): #this is used to get us to he hurdles
+            move()
+    elif wall_on_right():#this is used to get us up the hurdles
+        move()
+#this will repeat my funtion untill we are at the goal
+while not at_goal():
+    jump_hurdle()
